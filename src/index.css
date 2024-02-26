@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shine {
+  0% {
+    color: #7598c0; /* Initial color */
+  }
+  50% {
+    color: #ffffff; /* Shine color */
+  }
+  100% {
+    color: #7598c0; /* Back to initial color */
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animation-example {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.animation-out {
+  animation: slideOut 0.5 ease-in-out;
+}
+
+.flash-message {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.my-component.hidden {
+  opacity: 0;
+}
+
+.blue-glassmorphism {
+    background: rgb(39, 51, 89, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .text-gradient {
+    background-color: #fff;
+    background-image: radial-gradient(at 4% 36%, hsla(0,0%,100%,1) 0, transparent 53%), radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-bg-services {
+    background-color:#0f0e13;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 100%, hsla(225,39%,25%,1) 0, transparent 50%);
+  }
+  
+  .gradient-bg-transactions {
+    background-color: #0f0e13;
+    background-image: 
+      radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%);
+  }
+  
+  .gradient-bg-footer {
+    background-color: #0f0e13;
+    background-image: 
+      radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 53%), 
+      radial-gradient(at 50% 150%, hsla(339,49%,30%,1) 0, transparent 50%);
+  }
+
+  .eth-card {
+    background-color:#a099ff;
+    background-image: 
+      radial-gradient(at 83% 67%, rgb(152, 231, 156) 0, transparent 58%), 
+      radial-gradient(at 67% 20%, hsla(357,94%,71%,1) 0, transparent 59%), 
+      radial-gradient(at 88% 35%, hsla(222,81%,65%,1) 0, transparent 50%), 
+      radial-gradient(at 31% 91%, hsla(9,61%,61%,1) 0, transparent 52%), 
+      radial-gradient(at 27% 71%, hsla(336,91%,65%,1) 0, transparent 49%), 
+      radial-gradient(at 74% 89%, hsla(30,98%,65%,1) 0, transparent 51%), 
+      radial-gradient(at 53% 75%, hsla(174,94%,68%,1) 0, transparent 45%);
+  }
+
+  .gradient-bg-welcome {
+    background-color:#0f0e13;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  }
+
+  .white-glassmorphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .wallpaper-gradient {
+    background: rgb(31,30,28);
+background: radial-gradient(circle, rgba(31,30,28,0.9836135137648809) 16%, rgba(37,22,22,0.26932779947916663) 43%, rgba(62,53,52,0.9640056706276261) 73%);
+  }
+  
+  .footer-glassmorphism {
+    background: rgb(39, 51, 89, 0.4);
+    border-radius: 2px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .buraito {
+    filter: brightness(100%);
+  }
+
+  .shining-text {
+    font-weight: bold;
+    animation: shine 2s infinite; /* Adjust the duration as needed */
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+  }
